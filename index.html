@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros do Wil | O carro dos seus sonhos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0a0a0a',
+                        cardBg: '#141414',
+                        accentGold: '#d4af37',
+                        accentGoldHover: '#b5952f'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+        }
+        .glass-card {
+            background: rgba(20, 20, 20, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f3e7c4 0%, #d4af37 50%, #aa820a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #b5952f 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #e6c152 0%, #c4a236 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 antialiased selection:bg-accentGold selection:text-black">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-wider uppercase text-white">CARROS <span class="gold-gradient">DO WIL</span></span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#destaques" class="hover:text-accentGold transition-colors">Veículos</a>
+                <a href="#diferenciais" class="hover:text-accentGold transition-colors">Por que Nós</a>
+                <a href="#depoimentos" class="hover:text-accentGold transition-colors">Clientes</a>
+                <a href="#contato" class="hover:text-accentGold transition-colors">Contato</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/carrosdowil" target="_blank" class="hidden sm:inline-flex items-center justify-center p-2.5 rounded-full bg-cardBg border border-white/10 text-white hover:text-accentGold hover:border-accentGold/50 transition-all">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+                <a href="https://wa.me/5511999999999?text=Olá,%20vim%20pelo%20Instagram%20e%20gostaria%20de%20conversar%20sobre%20carros!" target="_blank" class="gold-btn text-black font-bold px-5 py-2.5 rounded-full text-sm shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 overflow-hidden">
+        <!-- Background Glow Elements -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accentGold/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cardBg border border-accentGold/30 text-accentGold text-xs font-semibold tracking-wide uppercase">
+                    <i class="fa-solid fa-star text-[10px]"></i> Referência em Carros Exclusivos
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-none text-white">
+                    O carro dos seus sonhos está a um <span class="gold-gradient">clique de distância.</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 font-light">
+                    Veículos rigorosamente selecionados, procedência garantida e o atendimento premium que você merece. Venha fechar o melhor negócio com o Wil.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#destaques" class="w-full sm:w-auto gold-btn text-black font-bold px-8 py-4 rounded-xl text-center shadow-xl flex items-center justify-center gap-2">
+                        <span>Ver Veículos Disponíveis</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    <a href="https://instagram.com/carrosdowil" target="_blank" class="w-full sm:w-auto bg-cardBg hover:bg-white/5 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram text-accentGold"></i>
+                        <span>@carrosdowil</span>
+                    </a>
+                </div>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+                    <div>
+                        <div class="text-2xl font-bold text-white">+500</div>
+                        <div class="text-xs text-gray-400">Carros Vendidos</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white">100%</div>
+                        <div class="text-xs text-gray-400">Revisados</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-accentGold">4.9 ★</div>
+                        <div class="text-xs text-gray-400">Avaliação Clientes</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Banner -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-2xl overflow-hidden glass-card p-3 shadow-2xl group">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" alt="Carro Esportivo de Luxo - Carros do Wil" class="w-full h-[380px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/141414/d4af37?text=Carros+do+Wil'">
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/80 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                        <div>
+                            <div class="text-xs text-accentGold font-semibold uppercase">Destaque da Semana</div>
+                            <div class="text-base font-bold text-white">BMW M4 Competition</div>
+                        </div>
+                        <span class="px-3 py-1 bg-accentGold/20 text-accentGold border border-accentGold/30 rounded-lg text-xs font-semibold">Exclusivo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="py-20 px-4 sm:px-6 bg-[#0e0e0e] border-y border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-accentGold">Por que nos escolher?</h2>
+                <h3 class="text-3xl font-extrabold text-white">Excelência em cada detalhe</h3>
+                <p class="text-gray-400">Nosso compromisso é entregar confiança e segurança na realização do seu sonho automotivo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-accentGold/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-accentGold/10 border border-accentGold/30 flex items-center justify-center text-accentGold text-2xl mb-6 group-hover:bg-accentGold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Veículos Revisados & Garantia</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Todos os carros passam por um rigoroso laudo cautelar e revisão mecânica completa antes de irem para a vitrine.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-accentGold/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-accentGold/10 border border-accentGold/30 flex items-center justify-center text-accentGold text-2xl mb-6 group-hover:bg-accentGold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Atendimento Personalizado</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Suporte dedicado via Direct do Instagram ou WhatsApp. Te ajudamos a encontrar exatamente o modelo que cabe no seu estilo.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:border-accentGold/50 transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-xl bg-accentGold/10 border border-accentGold/30 flex items-center justify-center text-accentGold text-2xl mb-6 group-hover:bg-accentGold group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">As Melhores Taxas</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Parcerias com as principais financeiras do mercado para garantir aprovação rápida de crédito e taxas que cabem no seu bolso.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITRINE DE VEÍCULOS -->
+    <section id="destaques" class="py-20 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <h2 class="text-xs font-bold tracking-widest uppercase text-accentGold mb-2">Vitrine Exclusiva</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Veículos em Destaque</h3>
+                </div>
+                <a href="https://instagram.com/carrosdowil" target="_blank" class="text-sm font-semibold text-accentGold hover:underline flex items-center gap-2">
+                    <span>Ver todos no Instagram</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Grid de Carros -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Car 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-accentGold/40 transition-all duration-300 flex flex-col">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=600" alt="Porsche Macan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/141414/d4af37?text=Porsche+Macan'">
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-accentGold text-xs font-bold px-3 py-1 rounded-full border border-accentGold/30">SUV Premium</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Porsche Macan S</h4>
+                            <div class="flex items-center gap-4 text-xs text-gray-400 mb-4 pb-4 border-b border-white/10">
+                                <span><i class="fa-regular fa-calendar text-accentGold mr-1"></i> 2022/2023</span>
+                                <span><i class="fa-solid fa-gauge text-accentGold mr-1"></i> 18.000 km</span>
+                            </div>
+                            <div class="text-2xl font-black text-accentGold mb-6">R$ 489.900</div>
+                        </div>
+                        <button onclick="openCarModal('Porsche Macan S', 'R$ 489.900', '2022/2023', '18.000 km')" class="w-full gold-btn text-black font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Quero este!</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-accentGold/40 transition-all duration-300 flex flex-col">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=600" alt="Audi A5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/141414/d4af37?text=Audi+A5+Sportback'">
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-accentGold text-xs font-bold px-3 py-1 rounded-full border border-accentGold/30">Sedan Executivo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">Audi A5 Sportback</h4>
+                            <div class="flex items-center gap-4 text-xs text-gray-400 mb-4 pb-4 border-b border-white/10">
+                                <span><i class="fa-regular fa-calendar text-accentGold mr-1"></i> 2021/2021</span>
+                                <span><i class="fa-solid fa-gauge text-accentGold mr-1"></i> 32.000 km</span>
+                            </div>
+                            <div class="text-2xl font-black text-accentGold mb-6">R$ 259.900</div>
+                        </div>
+                        <button onclick="openCarModal('Audi A5 Sportback', 'R$ 259.900', '2021/2021', '32.000 km')" class="w-full gold-btn text-black font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Quero este!</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-white/10 hover:border-accentGold/40 transition-all duration-300 flex flex-col">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618843479313-7fd5faf3fb2d?auto=format&fit=crop&q=80&w=600" alt="BMW Série 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/141414/d4af37?text=BMW+320i+M+Sport'">
+                        <span class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-accentGold text-xs font-bold px-3 py-1 rounded-full border border-accentGold/30">Esportivo</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">BMW 320i M Sport</h4>
+                            <div class="flex items-center gap-4 text-xs text-gray-400 mb-4 pb-4 border-b border-white/10">
+                                <span><i class="fa-regular fa-calendar text-accentGold mr-1"></i> 2023/2023</span>
+                                <span><i class="fa-solid fa-gauge text-accentGold mr-1"></i> 9.500 km</span>
+                            </div>
+                            <div class="text-2xl font-black text-accentGold mb-6">R$ 319.900</div>
+                        </div>
+                        <button onclick="openCarModal('BMW 320i M Sport', 'R$ 319.900', '2023/2023', '9.500 km')" class="w-full gold-btn text-black font-bold py-3 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Quero este!</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS / PROVA SOCIAL -->
+    <section id="depoimentos" class="py-20 px-4 sm:px-6 bg-[#0e0e0e] border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest uppercase text-accentGold">Depoimentos</h2>
+                <h3 class="text-3xl font-extrabold text-white">O que dizem nossos clientes</h3>
+                <p class="text-gray-400">Histórias reais de quem realizou o sonho de dirigir um carro de alto padrão com o Wil.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-8 rounded-2xl relative">
+                    <div class="flex text-accentGold text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                        "Atendimento impecável! Vi o carro no Instagram do Wil, tirei dúvidas pelo WhatsApp e em menos de 3 dias o carro estava na minha garagem. Super recomendo!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accentGold/20 border border-accentGold/40 flex items-center justify-center font-bold text-accentGold text-sm">
+                            RC
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Rodrigo Cardoso</div>
+                            <div class="text-xs text-gray-400">São Paulo, SP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-8 rounded-2xl relative">
+                    <div class="flex text-accentGold text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                        "Transparência total na negociação e excelente avaliação no meu usado. O Wil é gente fina demais e cumpre o que promete. Nota 10!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accentGold/20 border border-accentGold/40 flex items-center justify-center font-bold text-accentGold text-sm">
+                            MS
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Mariana Souza</div>
+                            <div class="text-xs text-gray-400">Campinas, SP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-8 rounded-2xl relative">
+                    <div class="flex text-accentGold text-sm mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                        "Encontrei a minha BMW dos sonhos com facilidade no perfil. Processo de financiamento super rápido e sem burocracia. Valeu muito a pena!"
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-accentGold/20 border border-accentGold/40 flex items-center justify-center font-bold text-accentGold text-sm">
+                            FA
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-white">Felipe Almeida</div>
+                            <div class="text-xs text-gray-400">Santos, SP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO E CTA FINAL -->
+    <section id="contato" class="py-20 px-4 sm:px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-accentGold/5 to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 sm:p-12 text-center relative z-10 border border-accentGold/20 shadow-2xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Pronto para trocar de carro?</h2>
+            <p class="text-gray-400 max-w-xl mx-auto mb-8 font-light">
+                Não encontrou o que procurava aqui? Entre em contato agora mesmo pelo WhatsApp ou mande uma mensagem no Direct do Instagram que encomendamos o seu modelo ideal.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5511999999999?text=Olá,%20quero%20encontrar%20um%20carro%20especial%20com%20o%20Wil!" target="_blank" class="w-full sm:w-auto gold-btn text-black font-bold px-8 py-4 rounded-xl shadow-xl flex items-center justify-center gap-2 text-base">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Conversar no WhatsApp</span>
+                </a>
+                <a href="https://instagram.com/carrosdowil" target="_blank" class="w-full sm:w-auto bg-cardBg hover:bg-white/5 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl transition-all flex items-center justify-center gap-2 text-base">
+                    <i class="fa-brands fa-instagram text-accentGold text-xl"></i>
+                    <span>Seguir @carrosdowil</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-4 sm:px-6 border-t border-white/10 bg-darkBg text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-bold tracking-wider text-white uppercase">CARROS <span class="gold-gradient">DO WIL</span></div>
+            <div>&copy; 2026 Carros do Wil. Todos os direitos reservados.</div>
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com/carrosdowil" target="_blank" class="hover:text-accentGold transition-colors"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="hover:text-accentGold transition-colors"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL WHATSAPP INTERATIVO -->
+    <div id="carModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="glass-card max-w-md w-full rounded-2xl p-6 relative border border-accentGold/30 shadow-2xl animate-in fade-in zoom-in duration-200">
+            <button onclick="closeCarModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 rounded-xl bg-accentGold/10 border border-accentGold/30 flex items-center justify-center text-accentGold text-xl">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+                <div>
+                    <h3 class="text-xs uppercase tracking-wider text-accentGold font-bold">Simular Atendimento</h3>
+                    <h4 id="modalCarName" class="text-lg font-bold text-white">Veículo</h4>
+                </div>
+            </div>
+            
+            <div class="space-y-3 mb-6 bg-black/40 p-4 rounded-xl border border-white/5 text-sm">
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Preço:</span>
+                    <span id="modalCarPrice" class="font-bold text-accentGold">R$ 0,00</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Ano:</span>
+                    <span id="modalCarYear" class="font-medium text-white">0000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Quilometragem:</span>
+                    <span id="modalCarKm" class="font-medium text-white">0 km</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400 mb-6 leading-relaxed">
+                Ao clicar abaixo, você será direcionado para o WhatsApp oficial do Wil com a mensagem pronta para este veículo.
+            </p>
+
+            <a id="modalWhatsappLink" href="#" target="_blank" class="w-full gold-btn text-black font-bold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Continuar para o WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT INTERATIVO -->
+    <script>
+        // Função para abrir o modal de interesse no carro
+        function openCarModal(name, price, year, km) {
+            document.getElementById('modalCarName').innerText = name;
+            document.getElementById('modalCarPrice').innerText = price;
+            document.getElementById('modalCarYear').innerText = year;
+            document.getElementById('modalCarKm').innerText = km;
+
+            // Montar mensagem personalizada para o WhatsApp
+            const message = encodeURIComponent(`Olá Wil! Vi sua landing page e tenho interesse no veículo *${name}* (${year}, ${km}) anunciado por *${price}*. Poderia me passar mais detalhes?`);
+            const whatsappUrl = `https://wa.me/5511999999999?text=${message}`;
+            
+            document.getElementById('modalWhatsappLink').href = whatsappUrl;
+            document.getElementById('carModal').classList.remove('hidden');
+        }
+
+        // Função para fechar o modal
+        function closeCarModal() {
+            document.getElementById('carModal').classList.add('hidden');
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.onclick = function(event) {
+            const modal = document.getElementById('carModal');
+            if (event.target === modal) {
+                closeCarModal();
+            }
+        }
+    </script>
+</body>
+</html>
